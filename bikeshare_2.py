@@ -81,7 +81,7 @@ def load_data(city, month, day):
         
     return df
 
-def time_stats(df):
+def display_time_stats(df):
     """Displays statistics on the most frequent times of travel."""
 
     print('\nCalculating The Most Frequent Times of Travel...\n')
@@ -178,8 +178,12 @@ def user_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
-def display_data(df):
+<<<<<<< HEAD
+def display_raw_data(df):
     """Dsplays 5 raw data on each iteration."""
+=======
+def display_raw_data(df):
+>>>>>>> refactoring
     
     c = 0
     print("\nFirst 5 raw data\n")
@@ -197,11 +201,11 @@ def main():
         city, month, day = get_filters()
         df = load_data(city, month, day)
 
-        time_stats(df)
+        display_time_stats(df)
         station_stats(df)
         trip_duration_stats(df)
         user_stats(df)
-        display_data(df)
+        display_raw_data(df)
 
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
