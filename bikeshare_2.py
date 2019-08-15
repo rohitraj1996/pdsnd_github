@@ -179,6 +179,7 @@ def user_stats(df):
     print('-'*40)
 
 def display_data(df):
+    """Dsplays 5 raw data on each iteration."""
     
     c = 0
     print("\nFirst 5 raw data\n")
